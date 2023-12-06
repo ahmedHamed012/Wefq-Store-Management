@@ -1,0 +1,40 @@
+include service-card.pug
+doctype html
+html(lang="en")
+    head
+        include layout-user.pug 
+        title الصفحة الرئيسية 
+    body 
+        div(class="nav")
+            div(class="head")
+                div(class="logo")
+                    img(src="./logo.png",id="logo")
+                div(class="user")
+                    span(class="username")= username
+                    span(class="username") أهلاً بك ,
+                    span(class="username") 
+                        i(class="fa-solid fa-user") 
+            div(class="body")
+                p(id="p1") أهلاَ وسهلاً بك فى شركة الوفاق 
+                p(id="p2") لإدارة الموارد والمنتجات
+        div(class="services")
+            span(class="service-head") <i class="fa-solid fa-database" style="color:#06cf9c"></i> الخدمات المتاحة
+            div(class="cards-container")
+                div.service-card
+                    form(action="/Add", method="post", id="form1")
+                        input(type="hidden", name="Admin", value= username)     
+                    <i class="fa-solid fa-cart-plus" style="font-size:36px"></i>
+                    +serviceCardSpan("إضافة منتج جديد")
+                    +buttonSubmit("إضافة","form1")
+                div.service-card
+                    form(action="/Edit", method="post", id="form2")
+                        input(type="hidden", name="Admin", value= username)     
+                    <i class="fa-solid fa-pen-to-square" style="font-size:36px"></i>
+                    +serviceCardSpan("تعديل منتج حالى ") 
+                    +buttonSubmit("تعديل","form2")
+                div.service-card
+                    form(action="/review", method="post", id="form3")
+                        input(type="hidden", name="Admin", value= username)     
+                    <i class="fa-solid fa-list" style="font-size:36px"></i>
+                    +serviceCardSpan("عرض جميع المنتجات")
+                    +buttonSubmit("عرض","form3")

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./index.css">
+        <title>متجر الوفاق | إدارة الموارد</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+</head>
+<body>
+    <div class="img">
+        <img src="./image.png">
+    </div>
+    <div class="formm">
+        <div class="head">
+    <p class="head-p"><i class="fa-sharp fa-solid fa-leaf" style="margin-left:10px ;"></i>تسجيل الدخول</p>
+    </div>
+    <form action="/Home" method="POST" id="myform">
+    <p class="label"><i class="fa-solid fa-user" style="margin-left:10px ;"></i>البريد الالكترونى أو اسم المستخدم</p>
+    <input type="text" name="email" placeholder="أدخل البريد الالكترونى الخاص بك هنا.." class="inpt">
+    <p class="label"><i class="fa-solid fa-lock" style="margin-left:10px ;"></i>كلمة المرور</p>
+    <input type="password" name="password" placeholder="أدخل كلمة المرور الخاص بك هنا.." class="inpt"><br><br>
+    <input type="submit" value="التسجيل" class="sbmt">
+</form>
+<div class="error"><p class="err-p"></p></div>
+    </div>
+    <script src="./dom.js"></script>
+</body>
+</html>

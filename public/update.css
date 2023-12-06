@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria&display=swap');
+html{direction: rtl;}
+*{box-sizing: border-box;}
+body
+{
+    padding:0;
+    margin:0;
+}
+.head
+{
+    width:100%;
+    height:auto;
+    text-align: center;
+    font-family: "Alexandria";
+    color: white;
+    font-size:30px;
+    padding:10px;
+    background-color: #06cf9c;
+}
+.form
+{
+    width:920px;
+    height:56px;
+    margin: auto;
+    margin-top: 20px;
+    border:2px solid #06cf9c;
+    border-radius: 10px;
+    outline: #06cf9c;
+
+}
+.form form input[type=text]
+{
+    width:800px;
+    border-radius:10px;
+    font-family:"Alexandria";
+    font-size:16px;
+    height:52px;
+    border:none;
+    outline:none;
+    padding-right:10px;
+}
+.form form input[type=submit]
+{
+    width:100px;
+    height:52px;
+    border-radius: 10px;
+    background:none;
+    font-family: "Alexandria";
+    color:white;
+    background-color: #06cf9c;
+    font-size:15px;
+    border: none;
+    border-right:3px solid #06cf9c;
+    cursor: pointer;
+    float: left;
+}

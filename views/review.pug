@@ -1,0 +1,45 @@
+-let x = JSON.parse(data)
+//-h6= x[0]["ProductAddingAdmin"]
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="./review.css")
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        title عرض جميع المنتجات
+    body 
+        //- .container 
+        //-     table(class="table table-striped")
+        //-         tr 
+        //-             td تاريخ إضافة المنتج
+        //-             td مسئول الاضافة
+        //-             td كمية المنتج
+        //-             td كود المنتج
+        //-             td اسم المنتج
+        //-         each val,index in x 
+        //-             tr 
+        //-                 td #{x[index]["ProductAddingTime"]}
+        //-                 td #{x[index]["ProductAddingAdmin"]}
+        //-                 td #{x[index]["ProductQuantity"]}
+        //-                 td #{x[index]["ProductCode"]}
+        //-                 td #{x[index]["ProductName"]}
+        div(class="head-nav")
+            div(class="logo")
+                img(src="./logo.png",id="logo")
+            div(class="user")
+                span(class="username") أهلاً بك , 
+                span(class="username")= username
+        .head 
+            h1 جميع المنتجات المتاحة
+        .container
+            each val,index in x
+                .card
+                    img(src=`./${x[index]["ProductImage"]}` alt='Denim Jeans' style='width:100%;height:150px;')
+                    h4 #{x[index]["ProductName"]}
+                    p.price #{x[index]["ProductCode"]}
+                    p
+                      button عرض التفاصيل
